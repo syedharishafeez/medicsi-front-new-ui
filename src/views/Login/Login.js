@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     border:"1px solid",
     height:"100vh",
-    overflowY:"hidden"
+    overflowY:"hidden",
   },
   input: {
     color: 'white'
@@ -54,12 +54,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    borderRadius: 15,
 
     backgroundColor: `rgb(0,0,0,0)`, /* Fallback color */
-  backgroundColor: `rgba(0,0,0, 0.7)`, /* Black w/opacity/see-through */
+//   backgroundColor: `rgba(0,0,0, 0.7)`, /* Black w/opacity/see-through */
   color: "white",
   // fontWeight: "bold",
-  border: "3px solid #f1f1f1",
+//   border: "3px solid #f1f1f1",
   zIndex: 2,
   },
   avatar: {
@@ -158,7 +159,7 @@ export default function Login() {
               autoFocus
               required={true}
               InputLabelProps={{
-                style: { color: '#f50057' },
+                style: { color: 'white' },
               }}
             />
             <TextField
@@ -174,7 +175,7 @@ export default function Login() {
               onInput={(e) => setUserPassword(e.target.value)}
               required={true}
               InputLabelProps={{
-                style: { color: '#f50057' },
+                style: { color: 'white' },
               }}
             />
             <FormControlLabel
@@ -204,14 +205,14 @@ export default function Login() {
               {"  "}
               Sign In
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link style={{color: "#000000", opacity: 0.5}} href="#" variant="body2">
+            <Grid container style={{alignItems: "center", justifyContent: "center"}}>
+              <Grid item ms>
+                <Link style={{color: "#000", fontWeight: 'bold', fontSize: 16}} href="#" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
-              <Grid item>
-                <Link style={{color: "#000000", opacity: 0.5}} href="#" variant="body2">
+              <Grid item ms>
+                <Link style={{color: "#000", fontWeight: 'bold', fontSize: 16}} href="#" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
